@@ -12,7 +12,7 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
     
     let teams = ["Arsenal", "Chelsea", "Everton", "Liverpool", "Manchester City", "Manchester United", "Newcastle", "Spurs", "Swansea"]
     var filtredTeams = [String]()
-    var resultSeachController = UISearchController()
+    var resultSeachController : UISearchController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,17 +39,17 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         // Test if resultSeachController is active to return filtred array count
         
-        if self.resultSeachController.active {
+        if self.resultSeachController.isActive {
             return self.filtredTeams.count
         } else {
             return self.teams.count
@@ -57,12 +57,12 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
         
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath) as! UITableViewCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) 
 
         // Test if resultSeachController is active to display the filtred array Strings
         
-        if self.resultSeachController.active {
+        if self.resultSeachController.isActive {
             cell.textLabel?.text = self.filtredTeams[indexPath.row]
         } else {
             cell.textLabel?.text = self.teams[indexPath.row]
@@ -73,16 +73,16 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
     
     // MARK: - UISearchResultsUpdating
     
-    func updateSearchResultsForSearchController(searchController: UISearchController) {
+    func updateSearchResults(for searchController: UISearchController) {
         
         // Remove all filtredTeams items
-        self.filtredTeams.removeAll(keepCapacity: false)
+        self.filtredTeams.removeAll(keepingCapacity: false)
         
         // Create a Predicate
-        let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text)
+        let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
         
         // Create NSArray (this array represent SELF in the Predicate above)
-        let array = (self.teams as NSArray).filteredArrayUsingPredicate(searchPredicate)
+        let array = (self.teams as NSArray).filtered(using: searchPredicate)
         
         // New filtredTeams from the array result
         self.filtredTeams = array as! [String]
