@@ -35,12 +35,12 @@ class Team {
         
         if let array = teamsArray {
             
-            for item in array {
+            for (index, item) in array.enumerated() {
                 
                 guard let name = item["name"], let imageName = item["imageName"], let stadium = item["stadium"], let website = item["website"] else {
                         
-                    print("Error in the Teams.plist file !")
-                    break
+                    print("Found nil in the Teams.plist file ! Item : \(index)")
+                    continue
                 }
                 
                 let team = Team(name: name,
