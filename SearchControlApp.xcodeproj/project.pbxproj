@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA59DFE11E285B150073CCEC /* Teams.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA59DFE01E285B150073CCEC /* Teams.plist */; };
 		CA9100881B63775900ED6D78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9100871B63775900ED6D78 /* AppDelegate.swift */; };
 		CA91008D1B63775900ED6D78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA91008B1B63775900ED6D78 /* Main.storyboard */; };
 		CA91008F1B63775900ED6D78 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA91008E1B63775900ED6D78 /* Images.xcassets */; };
 		CA9100921B63775900ED6D78 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA9100901B63775900ED6D78 /* LaunchScreen.xib */; };
 		CA91009E1B63775900ED6D78 /* SearchControlAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA91009D1B63775900ED6D78 /* SearchControlAppTests.swift */; };
 		CA9100AA1B637C8500ED6D78 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA9100A91B637C8500ED6D78 /* SearchTableViewController.swift */; };
+		CADBEB041E25417B004B2C51 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = CADBEB031E25417B004B2C51 /* Team.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA59DFE01E285B150073CCEC /* Teams.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Teams.plist; sourceTree = "<group>"; };
 		CA9100821B63775900ED6D78 /* SearchControlApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchControlApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA9100861B63775900ED6D78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA9100871B63775900ED6D78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +39,7 @@
 		CA91009C1B63775900ED6D78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA91009D1B63775900ED6D78 /* SearchControlAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchControlAppTests.swift; sourceTree = "<group>"; };
 		CA9100A91B637C8500ED6D78 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
+		CADBEB031E25417B004B2C51 /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +81,9 @@
 		CA9100841B63775900ED6D78 /* SearchControlApp */ = {
 			isa = PBXGroup;
 			children = (
-				CA9100871B63775900ED6D78 /* AppDelegate.swift */,
+				CADBEB031E25417B004B2C51 /* Team.swift */,
 				CA9100A91B637C8500ED6D78 /* SearchTableViewController.swift */,
 				CA91008B1B63775900ED6D78 /* Main.storyboard */,
-				CA91008E1B63775900ED6D78 /* Images.xcassets */,
-				CA9100901B63775900ED6D78 /* LaunchScreen.xib */,
 				CA9100851B63775900ED6D78 /* Supporting Files */,
 			);
 			path = SearchControlApp;
@@ -90,7 +92,11 @@
 		CA9100851B63775900ED6D78 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CA59DFE01E285B150073CCEC /* Teams.plist */,
 				CA9100861B63775900ED6D78 /* Info.plist */,
+				CA9100871B63775900ED6D78 /* AppDelegate.swift */,
+				CA91008E1B63775900ED6D78 /* Images.xcassets */,
+				CA9100901B63775900ED6D78 /* LaunchScreen.xib */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -199,6 +205,7 @@
 				CA91008D1B63775900ED6D78 /* Main.storyboard in Resources */,
 				CA9100921B63775900ED6D78 /* LaunchScreen.xib in Resources */,
 				CA91008F1B63775900ED6D78 /* Images.xcassets in Resources */,
+				CA59DFE11E285B150073CCEC /* Teams.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CADBEB041E25417B004B2C51 /* Team.swift in Sources */,
 				CA9100881B63775900ED6D78 /* AppDelegate.swift in Sources */,
 				CA9100AA1B637C8500ED6D78 /* SearchTableViewController.swift in Sources */,
 			);

@@ -10,8 +10,10 @@ import UIKit
 
 class SearchTableViewController: UITableViewController, UISearchResultsUpdating {
     
-    let teams = ["Arsenal", "Chelsea", "Everton", "Liverpool", "Manchester City", "Manchester United", "Newcastle", "Spurs", "Swansea"]
-    var filtredTeams = [String]()
+    
+    
+    var teams : [Team]!
+    var filtredTeams = [Team]()
     var resultSeachController : UISearchController!
 
     override func viewDidLoad() {
@@ -24,9 +26,12 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
         self.resultSeachController.dimsBackgroundDuringPresentation = false
         self.resultSeachController.searchBar.sizeToFit()
         
-        self.title = "BPL Teams"
+        self.title = "PL Teams"
+        
+        self.teams = Team.getTeams()
         
         self.tableView.tableHeaderView = self.resultSeachController.searchBar
+
         
         self.tableView.reloadData()
         
@@ -59,16 +64,27 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) 
-
-        // Test if resultSeachController is active to display the filtred array Strings
+        
+        var team : Team!
+        
+        // Test if resultSeachController is active to display the filtred array
         
         if self.resultSeachController.isActive {
-            cell.textLabel?.text = self.filtredTeams[indexPath.row]
+            team = self.filtredTeams[indexPath.row]
         } else {
-            cell.textLabel?.text = self.teams[indexPath.row]
+            team = self.teams[indexPath.row]
         }
         
+        cell.textLabel?.text = team.name
+        cell.imageView?.image = UIImage(named: team.imageName)
+        cell.detailTextLabel?.text = "🏟 " + team.stadium
+        
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return 80.0
     }
     
     // MARK: - UISearchResultsUpdating
@@ -79,13 +95,13 @@ class SearchTableViewController: UITableViewController, UISearchResultsUpdating 
         self.filtredTeams.removeAll(keepingCapacity: false)
         
         // Create a Predicate
-        let searchPredicate = NSPredicate(format: "SELF CONTAINS[c] %@", searchController.searchBar.text!)
+        let searchPredicate = NSPredicate(format: "SELF.name CONTAINS[c] %@", searchController.searchBar.text!)
         
         // Create NSArray (this array represent SELF in the Predicate above)
         let array = (self.teams as NSArray).filtered(using: searchPredicate)
         
         // New filtredTeams from the array result
-        self.filtredTeams = array as! [String]
+        self.filtredTeams = array as! [Team]
         
         // Reload TableView data
         self.tableView.reloadData()

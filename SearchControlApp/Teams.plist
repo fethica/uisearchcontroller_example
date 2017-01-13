@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Arsenal</string>
+		<key>imageName</key>
+		<string>ARS</string>
+		<key>stadium</key>
+		<string>Emirates Stadium</string>
+		<key>website</key>
+		<string>http://www.arsenal.com </string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Bournemouth</string>
+		<key>imageName</key>
+		<string>BOU</string>
+		<key>stadium</key>
+		<string>Vitality Stadium</string>
+		<key>website</key>
+		<string>http://www.afcb.co.uk </string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Burnley</string>
+		<key>imageName</key>
+		<string>BRN</string>
+		<key>stadium</key>
+		<string>Turf Moor</string>
+		<key>website</key>
+		<string>http://www.burnleyfootballclub.com</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Chelsea</string>
+		<key>imageName</key>
+		<string>CHE</string>
+		<key>stadium</key>
+		<string>Stamford Bridge</string>
+		<key>website</key>
+		<string>http://www.chelseafc.com</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Crystal Palace</string>
+		<key>imageName</key>
+		<string>CRY</string>
+		<key>stadium</key>
+		<string>Selhurst Park</string>
+		<key>website</key>
+		<string>http://www.cpfc.co.uk</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Everton</string>
+		<key>imageName</key>
+		<string>EVE</string>
+		<key>stadium</key>
+		<string>Goodison Park</string>
+		<key>website</key>
+		<string>http://www.evertonfc.com</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Hull City</string>
+		<key>imageName</key>
+		<string>HUL</string>
+		<key>stadium</key>
+		<string>KCOM Stadium</string>
+		<key>website</key>
+		<string>http://www.hullcitytigers.com</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Leicester City</string>
+		<key>imageName</key>
+		<string>LEI</string>
+		<key>stadium</key>
+		<string>King Power Stadium</string>
+		<key>website</key>
+		<string>http://www.lcfc.com</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Liverpool</string>
+		<key>imageName</key>
+		<string>LIV</string>
+		<key>stadium</key>
+		<string>Anfield</string>
+		<key>website</key>
+		<string>http://www.liverpoolfc.com</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Manchester City</string>
+		<key>imageName</key>
+		<string>MCI</string>
+		<key>stadium</key>
+		<string>Etihad Stadium</string>
+		<key>website</key>
+		<string>http://www.mancity.com</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Manchester United</string>
+		<key>imageName</key>
+		<string>MUN</string>
+		<key>stadium</key>
+		<string>Old Trafford</string>
+		<key>website</key>
+		<string>http://www.manutd.com</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Middlesbrough</string>
+		<key>imageName</key>
+		<string>MID</string>
+		<key>stadium</key>
+		<string>Riverside Stadium</string>
+		<key>website</key>
+		<string>http://www.mfc.co.uk </string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Southampton</string>
+		<key>imageName</key>
+		<string>SOU</string>
+		<key>stadium</key>
+		<string>St. Mary&apos;s Stadium</string>
+		<key>website</key>
+		<string>http://www.southamptonfc.com</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Stoke City
+Stoke City
+Stoke City</string>
+		<key>imageName</key>
+		<string>STK</string>
+		<key>stadium</key>
+		<string>bet365 Stadium</string>
+		<key>website</key>
+		<string>http://www.stokecityfc.com</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Sunderland</string>
+		<key>imageName</key>
+		<string>SUN</string>
+		<key>stadium</key>
+		<string>Stadium of Light</string>
+		<key>website</key>
+		<string>http://www.safc.com</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Swansea City</string>
+		<key>imageName</key>
+		<string>SWA</string>
+		<key>stadium</key>
+		<string>Liberty Stadium</string>
+		<key>website</key>
+		<string>http://www.swanseacity.net</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Tottenham Hotspur</string>
+		<key>imageName</key>
+		<string>TOT</string>
+		<key>stadium</key>
+		<string>White Hart Lane</string>
+		<key>website</key>
+		<string>http://www.tottenhamhotspur.com</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Watford</string>
+		<key>imageName</key>
+		<string>WAT</string>
+		<key>stadium</key>
+		<string>Vicarage Road</string>
+		<key>website</key>
+		<string>http://www.watfordfc.com</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>West Bromwich Albion</string>
+		<key>imageName</key>
+		<string>WBA</string>
+		<key>stadium</key>
+		<string>The Hawthorns</string>
+		<key>website</key>
+		<string>http://www.wba.co.uk </string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>West Ham United</string>
+		<key>imageName</key>
+		<string>WHU</string>
+		<key>stadium</key>
+		<string>London Stadium</string>
+		<key>website</key>
+		<string>http://www.whufc.com</string>
+	</dict>
+</array>
+</plist>
